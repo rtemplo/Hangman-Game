@@ -1,0 +1,15 @@
+// JSON Document
+{
+	[
+		{"word":"Houston", "hint":"City under water"}, 
+		{"word":"Reykjavik", "hint":"Capital of Iceland"},
+		{"word":"Mississippi", "hint":"Longest River in the USA"},
+		{"word":"Solstice", "hint":"Another word for season"},
+		{"word":"Window", "hint":"The top level browser object in JavaScript"},
+		{"word":"Anonymous", "hint":"A nameless function"},
+		{"word":"Cheetah", "hint":"Fastest land mammal"},
+		{"word":"Sonar", "hint":"Word for echo location in water"},
+		{"word":"Apple", "hint":"Company with the largest market cap in the world"},
+		{"word":"Chile", "hint":"Longest country in South America"}
+	]	
+}
