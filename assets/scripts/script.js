@@ -200,7 +200,7 @@ function HangMan(atts) {
 				}
 			
 			} else {
-				$("#play-again").hide();
+				$("#play-again").show();
 				showMessage("Game Finised", "Sorry. You're out of guesses and can't progress further.");
 			} //attempts remaining condition
 		
