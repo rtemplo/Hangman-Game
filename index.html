@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Hangman</title>
+	<title>Hangman by Ray Templo</title>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -15,22 +15,6 @@
 
 	<link rel="stylesheet" href="assets/css/style.css" />
 
-	<script type="text/javascript">
-		//this will be the predetermined word bank. It will be in a separate json file
-		var wordBank = [
-			{"word":"Atlantis", "hint":"The lost city of ..."}, 
-			{"word":"Reykjavik", "hint":"Capital of Iceland"},
-			{"word":"Mississippi", "hint":"Longest River in the USA"},
-			{"word":"Solstice", "hint":"Another word for season"},
-			{"word":"Window", "hint":"The top level browser object in JavaScript"},
-			{"word":"Anonymous", "hint":"A nameless function"},
-			{"word":"Cheetah", "hint":"Fastest land mammal"},
-			{"word":"Sonar", "hint":"Word for echo location in water"},
-			{"word":"Apple", "hint":"Company with the largest market cap in the world"},
-			{"word":"Chile", "hint":"Longest country in South America"}
-		];
-	</script>
-
 	<script type="text/javascript" src="assets/scripts/script.js"></script>
 </head>
 
@@ -41,31 +25,58 @@
 		<h2>Let's Play Hangman!</h2>
 	</div>
 	
-	<div id="hint" class="section headerText"></div>
+	<div class="section"><span id="order-number" class="headerText"></span>&nbsp;<span id="hint" class="headerText"></span></div>
 
 	<div id="wordPen" class="section">  
 	</div>
+	
 	<hr>
+	
 	<div class="section">
 	  <span class="headerText">Letters already used</span>
 	</div>
 
 	<div id="letters-used" class="section">
 	</div>
+	
 	<hr>
-	<div id="info-panel" class="section">
-	  <div class="number-display">Attempts Remaining: <span id="attempts-remaining"></span></div>
-	  <div class="number-display">Correct: <span id="correct">0</span></div>
-	  <div class="number-display">Incorrect: <span id="incorrect">0</span></div>
+	
+	<div id="info-panel" class="section info-panel">
+	  <div>Attempts Remaining: <span class="number-display" id="attempts-remaining"></span></div>
+	  <div>Correct: <span class="number-display" id="correct">0</span></div>
+	  <div>Incorrect: <span class="number-display" id="incorrect">0</span></div>
+	  <div>Words Completed: <span class="number-display" id="score">0</span></div>
 	</div>
+	
 	<hr>
+	
 	<div id="control-bar" class="section">
-	  <button id="start-game" type="button">Start Game</button>
-  	  <button id="new-game" type="button">New Game</button>
+  	  <span id="game-start-text">Press any key to start</span>
+	  <button id="next-word" class="btn btn-info" type="button">Next Word</button>
+	  <button id="play-again" class="btn btn-info" type="button">Play Again</button>
 	</div>
 
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="modalMessageDisplay" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="closeModalMessage" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close Modal</span></button>
+				<h4 class="modal-title">Modal Header</h4>
+			</div>
+			<div class="modal-body">
+				<p>This is a small modal.</p>
+			</div>
+<!--
+			<div class="modal-footer">
+				<button type="button" id="closeModalMessage" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+-->
+		</div>
+	</div>
+</div>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
