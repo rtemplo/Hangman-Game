@@ -253,7 +253,7 @@ $(document).ready(function (){
 		if (game != null && game !== "undefined") {
 			game.next();
 		}
-	})
+	});
 	
-	$("#play-again").on("click", function () {window.location.reload})
+	$("#play-again").on("click", function () {window.location.reload});
 });
